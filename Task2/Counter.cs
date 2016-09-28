@@ -11,14 +11,14 @@ namespace Task2
         public static int A { get; set; } = 0;
         public static int B { get; set; } = 1;
         public static string Result { get; set; } = string.Empty;
+        public static int ResultInt { get; set; } = 0;
 
-
-        public static int Fibonacci(int n)
+        public static string Fibonacci(int n)
         {
             if ((A >= n) || (B >= n))
             {
-                PrintResult();
-                return 0;
+                return Result;
+
             }
             Result = $"{Result}{A} {B} ";
             A = A + B;
@@ -26,20 +26,10 @@ namespace Task2
             return Fibonacci(n);
         }
 
-        public static void PrintResult()
-        {
-            Console.WriteLine(Result);
-        }
 
-        public static int Factorial(int n)
+        public static int Factorial(int num)
         {
-            if (n <= 1)
-            {
-                Result = n.ToString();
-                PrintResult();
-                return 1;
-            }
-            return n * Factorial(n - 1);
+            return (num == 0) ? 1 : num * Factorial(num - 1);
         }
     }
 }

@@ -10,8 +10,8 @@ namespace Task2
     {
         static void Main(string[] args)
         {
-            Counter.Fibonacci(152);
-            Counter.Factorial(152);
+            Console.WriteLine(Counter.Fibonacci(152));
+            Console.WriteLine(Counter.Factorial(9));
             Console.ReadKey();
         }
     }
